@@ -1,0 +1,7 @@
+{
+    "eslint.packageManager": "yarn",
+    "files.associations": {
+        "*.tmLanguage.json": "json-tmlanguage",
+        "*.tmLanguage.yaml": "yaml-tmlanguage"
+    }
+}

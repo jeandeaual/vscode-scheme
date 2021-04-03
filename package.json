@@ -1,0 +1,56 @@
+{
+    "name": "scheme",
+    "displayName": "Scheme",
+    "publisher": "jeandeaual",
+    "repository": "https://github.com/jeandeaual/vscode-scheme",
+    "description": "",
+    "version": "0.1.0",
+    "license": "MIT",
+    "author": {
+        "name": "Alexis Jeandeau"
+    },
+    "engines": {
+        "vscode": "^1.0.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "keywords": [
+        "scheme",
+        "syntax"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "scheme",
+                "aliases": [
+                    "Scheme",
+                    "scheme"
+                ],
+                "extensions": [
+                    ".scm",
+                    ".sch",
+                    ".rkt"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "scheme",
+                "scopeName": "source.scheme",
+                "path": "./syntaxes/scheme.tmLanguage.json"
+            }
+        ]
+    },
+    "devDependencies": {
+        "js-yaml": "^4.0.0",
+        "markdown-extract": "^1.0.2",
+        "ovsx": "^0.1.0-next.a9154dc",
+        "vsce": "^1.85.1"
+    },
+    "scripts": {
+        "vscode:prepublish": "yarn convertMainSyntax",
+        "convertMainSyntax": "npx js-yaml syntaxes/scheme.tmLanguage.yaml > syntaxes/scheme.tmLanguage.json"
+    }
+}
