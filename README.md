@@ -14,7 +14,8 @@ Scheme syntax highlighting for VSCode.
 
 ## Installation
 
-[Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=jeandeaual.scheme)
+* [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=jeandeaual.scheme)
+* [Open VSX Registry](https://open-vsx.org/extension/jeandeaual/scheme)
 
 ## Build
 
@@ -29,4 +30,4 @@ See [here](CHANGELOG.md).
 
 # Aknowledgements
 
-This extension is based on [`Scheme.tmLanguage`](https://github.com/egrachev/sublime-scheme/blob/master/Scheme.tmLanguage)
+This extension is based on [`Scheme.tmLanguage`](https://github.com/egrachev/sublime-scheme/blob/master/Scheme.tmLanguage).
