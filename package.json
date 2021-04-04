@@ -57,6 +57,13 @@
                 "language": "scheme",
                 "scopeName": "source.scheme",
                 "path": "./syntaxes/scheme.tmLanguage.json"
+            },
+            {
+                "scopeName": "markdown.scheme.codeblock",
+                "path": "./syntaxes/scheme.markdown.tmLanguage.json",
+                "injectTo": [
+                    "text.html.markdown"
+                ]
             }
         ]
     },
@@ -67,7 +74,8 @@
         "vsce": "^1.85.1"
     },
     "scripts": {
-        "vscode:prepublish": "yarn convertMainSyntax",
-        "convertMainSyntax": "npx js-yaml syntaxes/scheme.tmLanguage.yaml > syntaxes/scheme.tmLanguage.json"
+        "vscode:prepublish": "yarn convertMainSyntax && yarn convertMarkdownSyntax",
+        "convertMainSyntax": "npx js-yaml syntaxes/scheme.tmLanguage.yaml > syntaxes/scheme.tmLanguage.json",
+        "convertMarkdownSyntax": "npx js-yaml syntaxes/scheme.markdown.tmLanguage.yaml > syntaxes/scheme.markdown.tmLanguage.json"
     }
 }
