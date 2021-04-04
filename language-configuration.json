@@ -21,5 +21,10 @@
         ["(", ")"],
         ["\"", "\""],
         ["'", "'"]
-    ]
+    ],
+    "wordPattern": "[\\w\\-\\.:<>\\*][\\w\\d\\.\\\\/\\-\\?<>\\*!]+",
+    "indentationRules": {
+        "increaseIndentPattern": "^\\s*\\(.*[^)]\\s*$",
+        "decreaseIndentPattern": ""
+    }
 }
