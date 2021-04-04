@@ -19,7 +19,8 @@
     "extensions": [
         "togusa09.tmlanguage",
         "dbaeumer.vscode-eslint",
-        "redhat.vscode-yaml"
+        "redhat.vscode-yaml",
+        "eamodio.gitlens"
     ],
 
     // Use 'postCreateCommand' to run commands after the container is created.
