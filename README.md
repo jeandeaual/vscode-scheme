@@ -1,4 +1,4 @@
-# VSCode Guile
+# VSCode Scheme
 
 [![build](https://github.com/jeandeaual/vscode-scheme/workflows/build/badge.svg)](https://github.com/jeandeaual/vscode-scheme/actions?query=workflow%3Abuild)
 
