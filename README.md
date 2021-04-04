@@ -14,9 +14,7 @@ Scheme syntax highlighting for VSCode.
 
 ## Installation
 
-1. Open the Extensions left panel in VSCode (Windows: Ctrl+Shift+X; MacOS: Cmd+Shift+X)
-2. Type in `Scheme` in the search bar
-3. Install the extension, then reload VSCode (Ctrl+R)
+[Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=jeandeaual.scheme)
 
 ## Build
 
@@ -31,4 +29,4 @@ See [here](CHANGELOG.md).
 
 # Aknowledgements
 
-This extension is based on egrachev's [`Scheme.tmLanguage`](https://github.com/egrachev/sublime-scheme/blob/master/Scheme.tmLanguage)
+This extension is based on [`Scheme.tmLanguage`](https://github.com/egrachev/sublime-scheme/blob/master/Scheme.tmLanguage)
