@@ -5,6 +5,7 @@ fileTypes:
   - scm
   - sch
   - ss
+  - ms
   - rkt
 patterns:
   - include: '#comment'

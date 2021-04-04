@@ -46,6 +46,7 @@
                     ".scm",
                     ".sch",
                     ".ss",
+                    ".ms",
                     ".rkt"
                 ],
                 "configuration": "./language-configuration.json"
