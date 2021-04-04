@@ -2,8 +2,16 @@
     "name": "scheme",
     "displayName": "Scheme",
     "publisher": "jeandeaual",
-    "repository": "https://github.com/jeandeaual/vscode-scheme",
-    "description": "",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/jeandeaual/vscode-scheme"
+    },
+    "homepage": "https://github.com/jeandeaual/vscode-scheme/blob/master/README.md",
+    "bugs": {
+        "url": "https://github.com/jeandeaual/vscode-scheme/issues"
+    },
+    "icon": "assets/icon.png",
+    "description": "Adds support for Scheme syntax highlighting.",
     "version": "0.1.0",
     "license": "MIT",
     "author": {
@@ -19,6 +27,13 @@
         "scheme",
         "syntax"
     ],
+    "badges": [
+        {
+            "url": "https://github.com/jeandeaual/vscode-scheme/workflows/build/badge.svg",
+            "href": "https://github.com/jeandeaual/vscode-scheme/actions?query=workflow%3Abuild",
+            "description": "GitHub build status"
+        }
+    ],
     "contributes": {
         "languages": [
             {
@@ -30,6 +45,7 @@
                 "extensions": [
                     ".scm",
                     ".sch",
+                    ".ss",
                     ".rkt"
                 ],
                 "configuration": "./language-configuration.json"

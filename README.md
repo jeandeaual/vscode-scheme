@@ -1,5 +1,7 @@
 # VSCode Guile
 
+[![build](https://github.com/jeandeaual/vscode-scheme/workflows/build/badge.svg)](https://github.com/jeandeaual/vscode-scheme/actions?query=workflow%3Abuild)
+
 Scheme syntax highlighting for VSCode.
 
 ## Features
@@ -26,3 +28,7 @@ npx vsce package
 ## Release Notes
 
 See [here](CHANGELOG.md).
+
+# Aknowledgements
+
+This extension is based on egrachev's [`Scheme.tmLanguage`](https://github.com/egrachev/sublime-scheme/blob/master/Scheme.tmLanguage)
