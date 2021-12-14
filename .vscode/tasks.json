@@ -7,7 +7,6 @@
             "label": "Package",
             "type": "shell",
             "command": "npx vsce package",
-            "dependsOn": "YAML to JSON",
             "group": {
                 "kind": "build",
                 "isDefault": true
@@ -23,13 +22,43 @@
         {
             "label": "YAML to JSON",
             "type": "shell",
-            "command": "npx js-yaml ${workspaceFolder}/syntaxes/scheme.tmLanguage.yaml > ${workspaceFolder}/syntaxes/scheme.tmLanguage.json",
+            "dependsOn": [
+                "YAML to JSON (Scheme syntax)",
+                "YAML to JSON (Scheme Markdown syntax)"
+            ],
             "group": "build"
         },
         {
             "label": "JSON to YAML",
             "type": "shell",
+            "dependsOn": [
+                "JSON to YAML (Scheme syntax)",
+                "JSON to YAML (Scheme Markdown syntax)"
+            ],
+            "group": "build"
+        },
+        {
+            "label": "YAML to JSON (Scheme syntax)",
+            "type": "shell",
+            "command": "npx js-yaml ${workspaceFolder}/syntaxes/scheme.tmLanguage.yaml > ${workspaceFolder}/syntaxes/scheme.tmLanguage.json",
+            "group": "build"
+        },
+        {
+            "label": "JSON to YAML (Scheme syntax)",
+            "type": "shell",
             "command": "yq e -P ${workspaceFolder}/syntaxes/scheme.tmLanguage.json > ${workspaceFolder}/syntaxes/scheme.tmLanguage.yaml",
+            "group": "build"
+        },
+        {
+            "label": "YAML to JSON (Scheme Markdown syntax)",
+            "type": "shell",
+            "command": "npx js-yaml ${workspaceFolder}/syntaxes/scheme.markdown.tmLanguage.yaml > ${workspaceFolder}/syntaxes/scheme.markdown.tmLanguage.json",
+            "group": "build"
+        },
+        {
+            "label": "JSON to YAML (Scheme Markdown syntax)",
+            "type": "shell",
+            "command": "yq e -P ${workspaceFolder}/syntaxes/scheme.markdown.tmLanguage.json > ${workspaceFolder}/syntaxes/scheme.markdown.tmLanguage.yaml",
             "group": "build"
         }
     ]
