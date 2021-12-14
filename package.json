@@ -12,7 +12,7 @@
     },
     "icon": "assets/icon.png",
     "description": "Adds support for Scheme syntax highlighting.",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "license": "MIT",
     "author": {
         "name": "Alexis Jeandeau"
