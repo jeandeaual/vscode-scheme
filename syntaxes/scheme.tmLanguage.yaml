@@ -35,15 +35,19 @@ repository:
     patterns:
       - match: "\
           (?x)\
-          (<=(\\s|\\(|\\[))\
-          (do|or|and|else|quasiquote|begin|if|case|set!|cond|let|unquote|define|let\\*|unquote-splicing|delay|letrec)\
+          (?<=(\\s|\\(|\\[))\
+          (\
+            do|or|and|else|quasiquote|begin|if|case|set!|cond|let|let\\*|letrec|unquote|define|unquote-splicing|delay\
+          )\
           (?=(\\s|\\())"
         name: keyword.control.scheme
       # These functions run a test, and return a boolean answer.
       - match: "\
           (?x)\
           (?<=(\\s|\\())\
-          (char-alphabetic|char-lower-case|char-numeric|char-ready|char-upper-case|char-whitespace|(?:char|string)(?:-ci)?(?:=|<=?|>=?)|atom|boolean|bound-identifier=|char|complex|identifier|integer|symbol|free-identifier=|inexact|eof-object|exact|list|(?:input|output)-port|pair|real|rational|zero|vector|negative|odd|null|string|eq|equal|eqv|even|number|positive|procedure)\
+          (\
+            char-alphabetic|char-lower-case|char-numeric|char-ready|char-upper-case|char-whitespace|(?:char|string)(?:-ci)?(?:=|<=?|>=?)|atom|boolean|bound-identifier=|char|complex|identifier|integer|symbol|free-identifier=|inexact|eof-object|exact|list|(?:input|output)-port|pair|real|rational|zero|vector|negative|odd|null|string|eq|equal|eqv|even|number|positive|procedure\
+          )\
           (\\?)\
           (?=(\\s|\\())"
         name: support.function.boolean-test.scheme
@@ -51,7 +55,9 @@ repository:
       - match: "\
           (?x)\
           (?<=(\\s|\\())\
-          (char->integer|exact->inexact|inexact->exact|integer->char|symbol->string|list->vector|list->string|identifier->symbol|vector->list|string->list|string->number|string->symbol|number->string)\
+          (\
+            char->integer|exact->inexact|inexact->exact|integer->char|symbol->string|list->vector|list->string|identifier->symbol|vector->list|string->list|string->number|string->symbol|number->string\
+          )\
           (?=(\\s|\\())"
         name: support.function.convert-type.scheme
       # These functions are potentially dangerous because
@@ -213,8 +219,6 @@ repository:
           - include: '#constants'
           - include: '#sexp'
           - include: '#illegal'
-      # Not sure this one is quite correct.  That \s* is
-      # particularly troubling
       - begin: "\
           (?x)\
           (?<=\\()\
