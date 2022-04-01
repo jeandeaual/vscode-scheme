@@ -27,7 +27,7 @@ jobs:
         with:
           persist-credentials: false
       - name: Setup Node
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3.1.0
         with:
           node-version: '16'
       - name: Cache the Node modules
@@ -70,7 +70,7 @@ jobs:
         with:
           persist-credentials: false
       - name: Setup Node
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3.1.0
         with:
           node-version: '16'
       - name: Cache the Node modules
