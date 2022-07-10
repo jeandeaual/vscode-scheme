@@ -37,7 +37,7 @@ repository:
           (?x)\
           (?<=(\\s|\\(|\\[))\
           (\
-            do|or|and|else|quasiquote|begin|if|case|set!|cond|let|let\\*|letrec|unquote|define|unquote-splicing|delay\
+            do|or|and|else|quasiquote|begin|if|case|record-case|set!|cond|let|let\\*|letrec|let-values|values|unquote|define|unquote-splicing|delay\
           )\
           (?=(\\s|\\())"
         name: keyword.control.scheme
@@ -67,7 +67,7 @@ repository:
           (?x)\
           (?<=(\\s|\\())\
           (set-(?:car|cdr)|\
-            (?:vector|string)-(?:fill|set)\
+            (?:vector|string|hashtable)-(?:fill|set)\
           )\
           (!)\
           (?=(\\s|\\())"
@@ -94,9 +94,10 @@ repository:
             with-(?:input|output)-from-file|\
             open-(?:input|output)-file|\
             char-(?:downcase|upcase|ready)|\
-            make-(?:polar|promise|rectangular|string|vector)\
+            make-(?:polar|promise|rectangular|string|vector|hashtable)|\
             string(?:-(?:append|copy|length|ref))?|\
-            vector(?:-length|-ref)\
+            vector(?:-length|-ref)|\
+            hashtable-ref\
           )\
           (?=(\\s|\\())"
         name: support.function.general.scheme
