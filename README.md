@@ -1,4 +1,4 @@
-# VSCode Scheme
+# Scheme Syntax for Visual Studio Code
 
 [![Visual Studio Marketplace](https://vsmarketplacebadge.apphb.com/version/jeandeaual.scheme.svg)](https://marketplace.visualstudio.com/items?itemName=jeandeaual.scheme)
 [![build](https://github.com/jeandeaual/vscode-scheme/workflows/build/badge.svg)](https://github.com/jeandeaual/vscode-scheme/actions?query=workflow%3Abuild)
@@ -22,7 +22,7 @@ Scheme syntax highlighting for Visual Studio Code.
 
 ```sh
 yarn install
-npx vsce package
+npx vsce package --yarn
 ```
 
 ## Release Notes
