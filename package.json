@@ -2,6 +2,7 @@
     "name": "scheme",
     "displayName": "Scheme",
     "publisher": "jeandeaual",
+    "private": true,
     "repository": {
         "type": "git",
         "url": "https://github.com/jeandeaual/vscode-scheme"

@@ -8,13 +8,13 @@ fileTypes:
   - ms
   - rkt
 patterns:
-  - include: '#comment'
-  - include: '#sexp'
-  - include: '#string'
-  - include: '#language-functions'
-  - include: '#quote'
-  - include: '#illegal'
-  - include: '#constants'
+  - include: "#comment"
+  - include: "#sexp"
+  - include: "#string"
+  - include: "#language-functions"
+  - include: "#quote"
+  - include: "#illegal"
+  - include: "#constants"
 repository:
   comment:
     captures:
@@ -24,7 +24,7 @@ repository:
     name: comment.line.semicolon.scheme
   constants:
     patterns:
-      - match: '#[t|f]'
+      - match: "#[t|f]"
         name: constant.language.boolean.scheme
       - match: (?<=[\(\s])((#e|#i)?[0-9]+(\.[0-9]+)?|(#x)[0-9a-fA-F]+|(#o)[0-7]+|(#b)[01]+)(?=[\s;()'",\[\]])
         name: constant.numeric.scheme
@@ -145,7 +145,7 @@ repository:
         end: (?=[\s()])|(?<=\n)
         name: string.other.quoted-object.scheme
         patterns:
-          - include: '#quoted'
+          - include: "#quoted"
   quote-sexp:
     # Something quoted with (quote «thing»). In this case «thing»
     # will not be evaluated, so we are considering it a string.
@@ -156,10 +156,10 @@ repository:
     contentName: string.other.quote.scheme
     end: (?=[\s)])|(?<=\n)
     patterns:
-      - include: '#quoted'
+      - include: "#quoted"
   quoted:
     patterns:
-      - include: '#string'
+      - include: "#string"
       - begin: (\()
         beginCaptures:
           "1":
@@ -170,9 +170,9 @@ repository:
             name: punctuation.section.expression.end.scheme
         name: meta.expression.scheme
         patterns:
-          - include: '#quoted'
-      - include: '#quote'
-      - include: '#illegal'
+          - include: "#quoted"
+      - include: "#quote"
+      - include: "#illegal"
   sexp:
     begin: (\()
     beginCaptures:
@@ -186,8 +186,8 @@ repository:
         name: meta.after-expression.scheme
     name: meta.expression.scheme
     patterns:
-      - include: '#comment'
-      - include: '#constants'
+      - include: "#comment"
+      - include: "#constants"
       - begin: "\
           (?x)\
           (?<=\\()\
@@ -215,10 +215,10 @@ repository:
         end: (?=\))
         name: meta.declaration.procedure.scheme
         patterns:
-          - include: '#comment'
-          - include: '#constants'
-          - include: '#sexp'
-          - include: '#illegal'
+          - include: "#comment"
+          - include: "#constants"
+          - include: "#sexp"
+          - include: "#illegal"
       - begin: "\
           (?x)\
           (?<=\\()\
@@ -245,10 +245,10 @@ repository:
         end: (?=\))
         name: meta.declaration.procedure.scheme
         patterns:
-          - include: '#comment'
-          - include: '#constants'
-          - include: '#sexp'
-          - include: '#illegal'
+          - include: "#comment"
+          - include: "#constants"
+          - include: "#sexp"
+          - include: "#illegal"
       - begin: (?<=\()(define)\s([[:alnum:]][[:alnum:]!$%&*+-./:<=>?@^_~]*)\s*.*?
         captures:
           "1":
@@ -258,10 +258,10 @@ repository:
         end: (?=\))
         name: meta.declaration.variable.scheme
         patterns:
-          - include: '#comment'
-          - include: '#constants'
-          - include: '#sexp'
-          - include: '#illegal'
+          - include: "#comment"
+          - include: "#constants"
+          - include: "#sexp"
+          - include: "#illegal"
       - match: (?<=[\(\s])(#\\)(space|newline|tab)(?=[\s\)])
         name: constant.character.named.scheme
       - match: (?<=[\(\s])(#\\)x[0-9A-F]{2,4}(?=[\s\)])
@@ -272,13 +272,13 @@ repository:
       # a and b. (a b c) == (a . (b . (c . nil)))
       - match: (?<=[ ()])\.(?=[ ()])
         name: punctuation.separator.cons.scheme
-      - include: '#sexp'
-      - include: '#illegal'
-      - include: '#quote-sexp'
-      - include: '#quote'
-      - include: '#language-functions'
-      - include: '#string'
-      - include: '#constants'
+      - include: "#sexp"
+      - include: "#illegal"
+      - include: "#quote-sexp"
+      - include: "#quote"
+      - include: "#language-functions"
+      - include: "#string"
+      - include: "#constants"
   string:
     begin: (")
     beginCaptures:
