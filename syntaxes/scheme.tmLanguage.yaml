@@ -136,7 +136,7 @@ repository:
           (?x)\
           (')\\s*\
           ((\\()\\s*(\\)))"
-        name: constant.other.empty-list.schem
+        name: constant.other.empty-list.scheme
       # Quoted double-quoted string or s-expression
       - begin: (')\s*
         beginCaptures:
